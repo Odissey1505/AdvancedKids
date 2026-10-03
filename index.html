@@ -58,6 +58,17 @@ const LESSONS = [
     tags    : ['Live room', 'Revision', 'Story episode']
   },
   {
+    n       : 7,
+    dir     : 'lessons/lesson-07/',
+    home    : 'lesson-07.html',
+    title   : 'Voices in My Head',
+    grammar : 'Vocabulary · Self-talk & changing your thoughts',
+    blurb   : 'Завтра Мія показує свій комікс, але один коментар запускає її внутрішній чат. Учні знайомляться з 12 виразами про self-talk, читають історію Мії, обирають, кому віддати мікрофон, і в breakout rooms допомагають героям змінити негативну думку.',
+    minutes : '30 / 60 min',
+    cover   : 'img/cover.webp',
+    tags    : ['Live room', 'Story episode', 'Vocabulary']
+  },
+  {
     n       : 13,
     dir     : 'lessons/lesson-13/',
     home    : 'lesson-13.html',
@@ -90,14 +101,37 @@ const LESSONS = [
     minutes : '33–37 / 60 min',
     cover   : 'img/cover.webp',
     tags    : ['Live room', 'Story quest', 'Grammar']
-  }
-
-  /* Наступний урок — папка lessons/lesson-16/ і скопійований блок.
-     Кома перед { відділяє його від попереднього уроку:
-  ,{
+  },
+  {
     n       : 16,
     dir     : 'lessons/lesson-16/',
     home    : 'lesson-16.html',
+    title   : 'The Hype Detector',
+    grammar : 'Revision 14–15 · Online phrases & mixed conditionals',
+    blurb   : 'Відео Нори про застосунок GlowUp розлетілося коротким кліпом, і шкільний чат палає. Команда Hype Detector допомагає Мії та Лео: повторює 10 виразів уроку 14, читає докази, розбирає mixed conditionals і в breakout rooms рятує груповий чат.',
+    minutes : '31–35 / 60 min',
+    cover   : 'img/cover.webp',
+    guide   : 'docs/Lesson-16-teacher-guide.pdf',
+    tags    : ['Live room', 'Revision', 'Story quest']
+  },
+  {
+    n       : 17,
+    dir     : 'lessons/lesson-17/',
+    home    : 'lesson-17.html',
+    title   : 'Who’s Controlling the Scroll?',
+    grammar : 'Vocabulary · Scrolling, notifications & attention',
+    blurb   : 'Мія хотіла подивитися «ще одне відео» — і зникла година. Учні шукають п’ятьох «підозрюваних» у її телефоні, вгадують 14 нових виразів з контексту, слухають експеримент Лео й у breakout rooms створюють Scroll Survival Kit.',
+    minutes : '38–42 / 60 min',
+    cover   : 'img/cover.webp',
+    tags    : ['Live room', 'Story quest', 'Vocabulary']
+  }
+
+  /* Наступний урок — папка lessons/lesson-18/ і скопійований блок.
+     Кома перед { відділяє його від попереднього уроку:
+  ,{
+    n       : 18,
+    dir     : 'lessons/lesson-18/',
+    home    : 'lesson-18.html',
     title   : 'Назва історії',
     grammar : 'Граматична тема',
     blurb   : 'Один-два речення про епізод.',
@@ -338,7 +372,7 @@ footer .in{display:flex; gap:14px; flex-wrap:wrap; align-items:center; max-width
     <div class="lessons" id="lessonList"></div>
     <div class="ghost" style="margin-top:16px">
       <h3>Наступний епізод</h3>
-      <p>Щоб додати урок: покладіть його папку в <code>lessons/</code> (наприклад <code>lessons/lesson-16/</code> з файлом <code>lesson-16.html</code> та своїми <code>img/</code>) і допишіть один блок у список <code>LESSONS</code> на початку цього файлу.</p>
+      <p>Щоб додати урок: покладіть його папку в <code>lessons/</code> (наприклад <code>lessons/lesson-17/</code> з файлом <code>lesson-17.html</code> та своїми <code>img/</code>) і допишіть один блок у список <code>LESSONS</code> на початку цього файлу.</p>
     </div>
   </section>
 
