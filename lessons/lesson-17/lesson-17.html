@@ -289,6 +289,7 @@ mark.r{background:linear-gradient(transparent 55%,rgba(61,232,255,.42) 55%); col
 .post .img.sunset::after{content:""; position:absolute; left:0; right:0; bottom:0; height:34%; background:
   linear-gradient(90deg,#120B30 0 8%,transparent 8% 11%,#120B30 11% 22%,transparent 22% 24%,#120B30 24% 40%,transparent 40% 43%,#120B30 43% 58%,transparent 58% 60%,#120B30 60% 79%,transparent 79% 82%,#120B30 82%);
   clip-path:polygon(0 40%,8% 40%,8% 10%,11% 10%,11% 50%,22% 50%,22% 0,24% 0,24% 30%,40% 30%,40% 55%,43% 55%,43% 20%,58% 20%,58% 45%,60% 45%,60% 5%,79% 5%,79% 35%,82% 35%,82% 60%,100% 60%,100% 100%,0 100%)}
+.post .img.photo img{position:absolute; inset:0; z-index:1; width:100%; height:100%; object-fit:cover}
 .post .img span{position:relative; z-index:2; filter:drop-shadow(0 10px 20px rgba(0,0,0,.4))}
 .post .img.room{background:linear-gradient(160deg,#F4EDE4,#E2D6C8 55%,#C9B8A6)}
 .post .img.sunrise{background:linear-gradient(180deg,#FFD38A,#FF9A6B 45%,#7C5CFF)}
@@ -989,9 +990,9 @@ const ESCAPE = {
   attack:[['📢','Sponsored post','Get 50% OFF the new headphones!'],['▶️','Recommended video','“10 study hacks you NEED”'],['🔥','Trending now','#morningroutine is going viral'],['❤️','Someone liked your post','…and 3 others']]
 };
 const FEED_POSTS = [
-  {acc:'rise.grind', img:'sunrise', e:'⏰', txt:'Everyone productive wakes up at 5 AM.'},
-  {acc:'perfect.space', img:'room', e:'🛋️', txt:'If your room doesn’t look like this, you’re doing life wrong.'},
-  {acc:'clout.club', img:'badge', e:'👑', txt:'Only losers have less than 1,000 followers.'}
+  {acc:'rise.grind', img:'sunrise', e:'⏰', pic:'img/feed/feed-1.webp', av:'img/feed/rise-grind.webp', txt:'Everyone productive wakes up at 5 AM.'},
+  {acc:'perfect.space', img:'room', e:'🛋️', pic:'img/feed/feed-2.webp', txt:'If your room doesn’t look like this, you’re doing life wrong.'},
+  {acc:'clout.club', img:'badge', e:'👑', pic:'img/feed/feed-3.webp', txt:'Only losers have less than 1,000 followers.'}
 ];
 
 const QUIZ = {
@@ -1419,7 +1420,7 @@ STEPS.push({
     const post = `<div class="app"><div class="apph"><b style="font-family:var(--dsp);font-size:18px">pixagram</b><span class="grow"></span><span>🤍 ✈️</span></div>
       ${p>=2&&p<=3?`<div class="refresh ${anim?'go':''}"><span class="sp"></span>${anim?'Refreshing…':'Pull to refresh'}</div>`:''}
       <div class="post"><div class="ph">${av('mia',34)}<div>mia.makes<small>${p===0?'Posting…':'15 min ago'}</small></div></div>
-        <div class="img sunset"><span>🛹</span>${p===0?`<div style="position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.45);font-size:20px;font-weight:800">⬆️ Uploading…</div>`:''}</div>
+        <div class="img sunset photo"><img src="img/mia-post.webp" alt="Mia skateboarding at sunset" onerror="this.remove()">${p===0?`<div style="position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.45);font-size:20px;font-weight:800">⬆️ Uploading…</div>`:''}</div>
         <div class="acts">❤️ 💬 ↗</div><div class="likes">❤️ <span class="n ${anim&&p===2?'bump':''}">${n}</span> likes ${p===3?'<span style="font-size:22px">😐</span>':''}</div>
         <div class="cap2"><b>mia.makes</b>golden hour 🌅 #skate</div></div></div>`;
     const chat = `<div class="app"><div class="apph">${av('leo',34)}<div><b>Leo</b><small>● online</small></div></div><div class="chat">
@@ -1461,9 +1462,9 @@ STEPS.push({
   parts:()=>3,
   render(d){
     const p=d.p||0, anim=FX.has('part')||FX.has('enter');
-    return `<div class="row" style="align-items:stretch;gap:16px;flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px">${FEED_POSTS.slice(0,p+1).map((f,i)=>`<div class="fpost ${anim&&i===p?'pop-in':''}" style="flex:1 1 0;min-width:240px">
-        <div class="ph" style="display:flex;gap:10px;align-items:center;padding:10px 14px;font-weight:800;font-size:15px">${av('feed',30)}@${f.acc}<span class="grow"></span><span class="sponsor">FOR YOU</span></div>
-        <div class="post"><div class="img ${f.img}" style="aspect-ratio:${p>=2?'16/6':'16/10'};font-size:${p>=2?44:60}px"><span>${f.e}</span></div></div>
+    return `<div class="row" style="align-items:stretch;justify-content:center;gap:16px;flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px">${FEED_POSTS.slice(0,p+1).map((f,i)=>`<div class="fpost ${anim&&i===p?'pop-in':''}" style="flex:1 1 0;min-width:240px;max-width:470px">
+        <div class="ph" style="display:flex;gap:10px;align-items:center;padding:10px 14px;font-weight:800;font-size:15px">${f.av?`<i class="av" style="--s:30px;--c:var(--feed)" role="img" aria-label="@${f.acc}"><img src="${f.av}" alt="" onerror="this.remove()"></i>`:av('feed',30)}@${f.acc}<span class="grow"></span><span class="sponsor">FOR YOU</span></div>
+        <div class="post"><div class="img ${f.img} photo" style="aspect-ratio:12/5;font-size:${p>=2?44:60}px">${f.pic?`<img src="${f.pic}" alt="" onerror="this.remove()">`:`<span>${f.e}</span>`}</div></div>
         <div class="txt">${esc(f.txt)}</div><div class="warnline">❤️ ${[41,96,63][i]}K · 💬 ${[2.1,5.8,9.3][i]}K</div></div>`).join('')}</div>
       ${p>=2?`<div class="two mt"><div style="display:grid;gap:14px">${say('mia','Why am I suddenly comparing my life to everyone else’s?',{size:60,cls:anim?'pop-in':''})}${say('leo','Maybe the feed is '+hl('{v|getting inside your head|get inside your head}')+'.',{size:60,cls:anim?'late':''})}</div>
         <div style="display:grid;gap:14px">${say('feed','Shh… keep scrolling. There’s always more. 🌀',{size:60,cls:anim?'later':''})}<div class="${anim?'later':''}">${foundCard('feed',anim)}</div></div></div>`:''}`;

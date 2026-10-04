@@ -13,6 +13,8 @@ lessons/lesson-17/
 ├── img/leo.webp     Лео (те саме фото, що в уроках 15–16)
 ├── img/sam.webp     Сем (фото з уроку 7)
 ├── img/nora.webp    Нора (фото з уроку 16)
+├── img/mia-post.webp  фото Мії на скейті — допис із лайками (сцена 8)
+├── img/feed/feed-1…3.webp  три дописи стрічки (сцена 9) + rise-grind.webp — аватар @rise.grind
 └── img/cover.webp   обкладинка картки на платформі
 ```
 
