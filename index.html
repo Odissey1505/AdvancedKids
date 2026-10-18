@@ -85,6 +85,17 @@ const LESSONS = [
     tags    : ['Live room', 'Story quest', 'Grammar']
   },
   {
+    n       : 9,
+    dir     : 'lessons/lesson-09/',
+    home    : 'lesson-09.html',
+    title   : 'The Unsent Message',
+    grammar : 'Revision 7–8 · Self-talk words & modal verbs in the past',
+    blurb   : 'Мія написала «This is terrible», Лео образився, а її пояснення так і не доставилось. Учні повторюють 12 виразів уроку 7, читають нотатки Мії, знаходять у чаті недоставлене повідомлення, пояснюють історію через past modals і в breakout rooms пишуть чат, який мирить героїв.',
+    minutes : '30 / 60 min',
+    cover   : 'img/cover.webp',
+    tags    : ['Live room', 'Revision', 'Story episode']
+  },
+  {
     n       : 13,
     dir     : 'lessons/lesson-13/',
     home    : 'lesson-13.html',
@@ -151,14 +162,48 @@ const LESSONS = [
     minutes : '35–41 / 60 min',
     cover   : 'img/cover.webp',
     tags    : ['Live room', 'Story quest', 'Grammar']
-  }
-
-  /* Наступний урок — папка lessons/lesson-19/ і скопійований блок.
-     Кома перед { відділяє його від попереднього уроку:
-  ,{
+  },
+  {
     n       : 19,
     dir     : 'lessons/lesson-19/',
     home    : 'lesson-19.html',
+    title   : 'Two Timelines: One Saturday',
+    grammar : 'Revision 17–18 · Screen-time words & reported speech',
+    blurb   : 'Одне сповіщення — і застосунок Saturday Replay показує Лео дві можливі суботи. Учні-Timeline Editors досліджують обидві, слухають голосові щоденники Лео та Мії, відновлюють повідомлення через reported speech і в breakout rooms створюють Timeline C, на яку Лео спирається у фіналі.',
+    minutes : '35–42 / 60 min',
+    cover   : 'img/cover.webp',
+    tags    : ['Live room', 'Revision', 'Story quest']
+  },
+  {
+    n       : 20,
+    dir     : 'lessons/lesson-20/',
+    home    : 'lesson-20.html',
+    title   : 'Escape the Algorithm',
+    grammar : 'Unit 2 Revision (11–19) · 36 phrases, causatives, reported speech, mixed conditionals',
+    blurb   : 'Мія та Лео тестують застосунок The Perfect Feed — і ALGORITHM.exe замикає їх усередині. Digital Rescue Team проходить 5 місій: Memory Vault і Alias, ремонт записів (causatives), розшифрування чату (reported speech), часова лабораторія (mixed conditionals) і Digital Survival Guide у breakout rooms. Кожна місія — +20% до втечі.',
+    minutes : '52–55 / 60 min',
+    cover   : 'img/cover.webp',
+    tags    : ['Live room', 'Unit revision', 'Story quest']
+  }
+
+  ,{
+    n       : 21,
+    dir     : 'lessons/lesson-21/',
+    home    : 'lesson-21.html',
+    title   : 'Real Ones Only',
+    grammar : 'Unit 3 · 15 friendship expressions (no grammar)',
+    blurb   : 'The Perfect Squad: Behind the Feed. Софі, Лео і Ной пішли на концерт без Мії — і вона дізналася з їхньої сторіс. Учні ухвалюють три рішення за героїв, слухають голосове Мії, радять друзям і в breakout rooms пишуть The Real Squad Code.',
+    minutes : '35 / 60 min',
+    cover   : 'img/cover.webp',
+    tags    : ['Live room', 'Vocabulary', 'Story decisions']
+  }
+
+  /* Наступний урок — папка lessons/lesson-22/ і скопійований блок.
+     Кома перед { відділяє його від попереднього уроку:
+  ,{
+    n       : 22,
+    dir     : 'lessons/lesson-22/',
+    home    : 'lesson-22.html',
     title   : 'Назва історії',
     grammar : 'Граматична тема',
     blurb   : 'Один-два речення про епізод.',
@@ -362,7 +407,7 @@ footer .in{display:flex; gap:14px; flex-wrap:wrap; align-items:center; max-width
     <div class="lessons" id="lessonList"></div>
     <div class="ghost" style="margin-top:16px">
       <h3>Наступний епізод</h3>
-      <p>Щоб додати урок: покладіть його папку в <code>lessons/</code> (наприклад <code>lessons/lesson-19/</code> з файлом <code>lesson-19.html</code> та своїми <code>img/</code>) і допишіть один блок у список <code>LESSONS</code> на початку цього файлу.</p>
+      <p>Щоб додати урок: покладіть його папку в <code>lessons/</code> (наприклад <code>lessons/lesson-21/</code> з файлом <code>lesson-21.html</code> та своїми <code>img/</code>) і допишіть один блок у список <code>LESSONS</code> на початку цього файлу.</p>
     </div>
   </section>
 
