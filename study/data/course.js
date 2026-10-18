@@ -26,7 +26,7 @@ window.AK_COURSE = {
       { n: 6,  kind: 'revision',      title: 'The Unlabelled Room', reviews: [4, 5] },
       { n: 7,  kind: 'vocab',         title: 'Inner Critic / Self-Talk' },
       { n: 8,  kind: 'grammar',       title: 'The Message That Was Never Sent' },
-      { n: 9,  kind: 'revision',      title: 'Revision', reviews: [7, 8] },
+      { n: 9,  kind: 'revision',      title: 'The Unsent Message', reviews: [7, 8] },
       { n: 10, kind: 'unit-revision', title: 'Unit 1 Revision', reviews: [1, 9] }
     ]},
     { n: 2, title: 'Digital Life & Social Media Pressure', lessons: [
@@ -38,8 +38,8 @@ window.AK_COURSE = {
       { n: 16, kind: 'revision',      title: 'The Hype Detector', reviews: [14, 15] },
       { n: 17, kind: 'vocab',         title: 'Algorithm & Screen Time' },
       { n: 18, kind: 'grammar',       title: 'Who Actually Said That?' },
-      { n: 19, kind: 'revision',      title: 'Revision', reviews: [17, 18] },
-      { n: 20, kind: 'unit-revision', title: 'Unit 2 Revision', reviews: [11, 19] }
+      { n: 19, kind: 'revision',      title: 'Two Timelines: One Saturday', reviews: [17, 18] },
+      { n: 20, kind: 'unit-revision', title: 'Escape the Algorithm', reviews: [11, 19] }
     ]},
     { n: 3, title: 'Relationships, Belonging & Conflict', lessons: [
       { n: 21, kind: 'vocab',         title: 'Real Ones Only' },
